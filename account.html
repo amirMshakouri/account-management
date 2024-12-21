@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حساب کاربری</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <h1>حساب کاربری</h1>
+    <nav>
+      <button class="tab-btn" data-target="profile">اطلاعات کاربری</button>
+      <button class="tab-btn" data-target="orders">تاریخچه سفارشات</button>
+      <button class="tab-btn" data-target="addresses">آدرس‌ها</button>
+      <button class="tab-btn" data-target="security">تنظیمات امنیتی</button>
+      <button class="tab-btn" data-target="notifications">تنظیمات اعلان‌ها</button>
+      <button class="tab-btn" data-target="payment">مدیریت پرداخت‌ها</button>
+      <button class="tab-btn" data-target="language">تنظیمات زبان</button>
+    </nav>
+  </header>
+  
+  <main>
+    <!-- اطلاعات کاربری -->
+    <section id="profile" class="content-section active">
+      <h2>اطلاعات کاربری</h2>
+      <img src="user-avatar.jpg" alt="عکس پروفایل" class="profile-picture">
+      <button id="change-profile-pic">تغییر عکس پروفایل</button>
+      <form id="update-profile">
+        <label for="username">نام کاربری:</label>
+        <input type="text" id="username" value="علی رضایی" required>
+        
+        <label for="email">ایمیل:</label>
+        <input type="email" id="email" value="ali@example.com" required>
+        
+        <button type="submit">ذخیره تغییرات</button>
+      </form>
+    </section>
+
+    <!-- تاریخچه سفارشات -->
+    <section id="orders" class="content-section">
+      <h2>تاریخچه سفارشات</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>شماره سفارش</th>
+            <th>تاریخ</th>
+            <th>وضعیت</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>12345</td>
+            <td>1402/09/10</td>
+            <td>تحویل داده شد</td>
+          </tr>
+          <tr>
+            <td>12346</td>
+            <td>1402/09/15</td>
+            <td>در انتظار ارسال</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- آدرس‌ها -->
+    <section id="addresses" class="content-section">
+      <h2>آدرس‌های ذخیره‌شده</h2>
+      <div class="address-item">
+        <p><strong>آدرس ۱:</strong> تهران، خیابان ولیعصر، پلاک ۱۲۳</p>
+        <button>ویرایش</button>
+        <button>حذف</button>
+      </div>
+      <div class="address-item">
+        <p><strong>آدرس ۲:</strong> مشهد، خیابان احمدآباد، پلاک ۲۵</p>
+        <button>ویرایش</button>
+        <button>حذف</button>
+      </div>
+      <button class="add-address">افزودن آدرس جدید</button>
+    </section>
+
+    <!-- تنظیمات امنیتی -->
+    <section id="security" class="content-section">
+      <h2>تنظیمات امنیتی</h2>
+      <form>
+        <label for="current-password">رمز عبور فعلی:</label>
+        <input type="password" id="current-password" required>
+        
+        <label for="new-password">رمز عبور جدید:</label>
+        <input type="password" id="new-password" required>
+        
+        <label for="confirm-password">تکرار رمز عبور جدید:</label>
+        <input type="password" id="confirm-password" required>
+        
+        <button type="submit">تغییر رمز عبور</button>
+      </form>
+    </section>
+
+    <!-- تنظیمات اعلان‌ها -->
+    <section id="notifications" class="content-section">
+      <h2>تنظیمات اعلان‌ها</h2>
+      <label>
+        <input type="checkbox" checked> دریافت ایمیل‌های تبلیغاتی
+      </label>
+      <label>
+        <input type="checkbox"> اطلاع‌رسانی پیامکی
+      </label>
+      <button>ذخیره تغییرات</button>
+    </section>
+
+    <!-- مدیریت پرداخت‌ها -->
+    <section id="payment" class="content-section">
+      <h2>مدیریت پرداخت‌ها</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>روش پرداخت</th>
+            <th>وضعیت</th>
+            <th>عملیات</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>کارت اعتباری</td>
+            <td>فعال</td>
+            <td><button>حذف</button></td>
+          </tr>
+          <tr>
+            <td>کیف پول الکترونیکی</td>
+            <td>غیرفعال</td>
+            <td><button>فعال کردن</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <button>افزودن روش پرداخت جدید</button>
+    </section>
+
+    <!-- تنظیمات زبان -->
+    <section id="language" class="content-section">
+      <h2>تنظیمات زبان</h2>
+      <select id="language-select">
+        <option value="fa">فارسی</option>
+        <option value="en">انگلیسی</option>
+      </select>
+      <button>ذخیره تغییرات</button>
+    </section>
+  </main>
+
+  <script src="./scripts.js"></script>
+</body>
+</html>
+
